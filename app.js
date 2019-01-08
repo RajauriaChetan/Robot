@@ -14,7 +14,8 @@ app.get("", function(req, res){
 })
 
 app.get('/chatbotmyles', function (req, res) {
-    res.sendFile('Index.html', { root: __dirname });
+console.log(res)
+
 });
 
 function ultaseedhamethod(greet)
