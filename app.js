@@ -21,6 +21,7 @@ app.get('/chatbotmyles', function (req, res) {
         res.status(200).send("Myles chatbot");
     })
 
+    var obj;
 
     router.post('', function (req, res) 
     {
@@ -28,15 +29,14 @@ app.get('/chatbotmyles', function (req, res) {
 
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
 
-        var obj;
         obj = {
             "fulfillmentText": "I am going to Delhi."
         }
-        res.status(201).json(obj);
-        module.exports = router;
 
     }
 
+    res.status(201).json(obj);
+    module.exports = router;
 
 
 
