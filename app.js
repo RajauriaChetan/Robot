@@ -38,7 +38,7 @@ app.use(bodyParser.json());
             "fulfillmentText": "I work in Carzonrent"
         }
     }
-    else if (parametersArr[0].trim() == "how")
+    else if (parametersArr[0].trim() == "How")
     {
         obj = {
             "fulfillmentText": "I am fine dear. How about you?"
