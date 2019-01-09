@@ -10,10 +10,10 @@ const dialogflow = require('dialogflow');
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/chatbotmyles', function (req, res) {
-    console.log(res)
+// app.get('/chatbotmyles', function (req, res) {
+//     console.log(res)
     
-    });
+//     });
 
     app.get("", function(req, res){
         res.status(200).send("Myles chatbot");
