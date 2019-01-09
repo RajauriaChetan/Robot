@@ -41,6 +41,12 @@ app.use(bodyParser.json());
             "fulfillmentText": "I work in Carzonrent"
         }
     }
+    else if (parametersArr[0].trim() == "how")
+    {
+        obj = {
+            "fulfillmentText": "I am fine dear. How about you?"
+        }
+    }
     else
     {
         obj = {
@@ -54,7 +60,7 @@ app.use(bodyParser.json());
 
     app.listen(port);
 
-    console.log("This Appjs is live!")
+    console.log("This App is in development!")
 
 
 
