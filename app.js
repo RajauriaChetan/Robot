@@ -13,7 +13,7 @@ app.get("", function(req, res){
     res.status(200).send("Myles chatbot");
 })
 
-app.post('/chatbotmyles', function (req, res) {
+app.get('/chatbotmyles', function (req, res) {
 console.log(res)
 
 });
