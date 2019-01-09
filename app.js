@@ -13,26 +13,10 @@ app.get("", function(req, res){
     res.status(200).send("Myles chatbot");
 })
 
-app.get('/chatbotmyles', function (req, res) {
+app.post('/chatbotmyles', function (req, res) {
 console.log(res)
 
 });
 
-function ultaseedhamethod(greet)
-{
-    console.log(greet);
-}
-
-ultaseedhamethod("cHeTaN")
 app.listen(port, () => console.log('Example app listening on port ${port}!'))
-
-
-
-
-
-
-
-
-
-
 
