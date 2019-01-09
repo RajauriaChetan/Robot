@@ -24,17 +24,19 @@ app.get('/chatbotmyles', function (req, res) {
 
     router.post('', function (req, res) 
     {
+        if (req.body.queryResult.intent.displayName.trim() == "demo") {
 
-        console.log("in the weather endpoint: " + JSON.stringify(req.body, null, 0));
+        console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
 
         var obj;
         obj = {
-            "fulfillmentText": "Sir, Price is from customer's side only, We will provide the vehicle with the full tank and customer also need to return with full tank"
+            "fulfillmentText": "I live in Surat"
         }
         res.status(201).json(obj);
         module.exports = router;
 
     }
+
 
 
 
