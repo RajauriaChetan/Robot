@@ -40,7 +40,7 @@ app.get('/chatbotmyles', function (req, res) {
 
 
 
-    }
+    });
 
 
 
