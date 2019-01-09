@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
-const router = express.Router();
 
 //app.get('/', (req, res) => res.send('My Name is Chetan Rajauria.'))
 
@@ -20,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
     })
 
 
-    router.post('', function (req, res){
+    app.post('/chatbotmyles', function (req, res){
         var objhhhhhh;
 
         console("The Intent name is : ",req.body.queryResult.intent.displayName)
