@@ -19,10 +19,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
     })
 
 
-    app.post("/chatbotmyles", function (req, res){
+    app.post('', function (req, res){
         var objhhhhhh;
 
         console("The Intent name is : ",req.body.queryResult.intent.displayName)
+
+        req.body.queryResult.fulfillmentText = "My name is chetan";
 
         if (req.body.queryResult.intent.displayName.trim() == "home") {
 
