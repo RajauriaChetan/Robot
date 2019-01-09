@@ -44,6 +44,14 @@ app.use(bodyParser.json());
             "fulfillmentText": "I am fine dear. How about you?"
         }
     }
+
+    else if (parametersArr[0].trim() == "who")
+    {
+        obj = {
+            "fulfillmentText": "I am your friend :)"
+        }
+    }
+
     else
     {
         obj = {
