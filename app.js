@@ -22,44 +22,21 @@ app.get('/chatbotmyles', function (req, res) {
     })
 
 
-
-
-
     router.post('', function (req, res) 
     {
 
         console.log("in the weather endpoint: " + JSON.stringify(req.body, null, 0));
 
-
         var obj;
-        if (req.body.queryResult.intent.displayName.trim() == "fuelPolicy") 
-        {
-
-            /*has parameters*/
-        if (req.body.queryResult.parameters != null &&
-            req.body.queryResault.parameters.price != null &&
-            req.body.queryResult.parameters.price.length > 0) 
-            {
-
-            var parametersArr = req.body.queryResult.parameters.price;
-            var parametersLength = parametersArr.length;
-
-            if (parametersArr[0].trim().toUpperCase() == "Price") 
-            {
-
-                obj = 
-                {
-                    "fulfillmentText": "Sir, Price is from customer's side only, We will provide the vehicle with the full tank and customer also need to return with full tank"
-                }
-
-            }
-
+        obj = {
+            "fulfillmentText": "Sir, Price is from customer's side only, We will provide the vehicle with the full tank and customer also need to return with full tank"
         }
+        res.status(201).json(obj);
+        module.exports = router;
+
     }
 
-    res.status(201).json(obj);
 
-    module.exports = router;
 
     }
 
