@@ -22,18 +22,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
     app.post('', function (req, res){
         var objhhhhhh;
 
-        console("The Intent name is : ",req.body.queryResult.intent.displayName)
+        console("The Intent name is : ",res.body.queryResult.intent.displayName)
 
-        req.body.queryResult.fulfillmentText = "My name is chetan";
-
+        console.log("The value is :",res.body.queryResult.fulfillmentText
+)
         if (req.body.queryResult.intent.displayName.trim() == "home") {
 
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
 
+        res.body.queryResult.intent.fulfillmentText = "Chetan Rajauria";
+
         objhhhhhh = {
             "fulfillmentText": "I am going to Delhi."
         }
-        res.status(201).json(objhhhhhh);
+        res.status(201).json(res.body.queryResult.intent.fulfillmentText);
         }
     });
 
