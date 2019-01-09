@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
     })
 
 
-    app.post('', function (req, res){
+    app.post("", function (req, res){
         var objhhhhhh;
 
         console("The Intent name is : ",req.body.queryResult.intent.displayName)
