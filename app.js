@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
     })
 
 
-    app.post('', function (req, res){
+    app.post('/chatbotmyles', function (req, res){
 
         
         if (req.body.queryResult.intent.displayName.trim() == "home") {
