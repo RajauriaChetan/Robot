@@ -2,28 +2,25 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
 
-//app.get('/', (req, res) => res.send('My Name is Chetan Rajauria.'))
-
-
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.get('/chatbotmyles', function (req, res) {
-//     console.log(res)
-    
-//     });
 
-    app.get("", function(req, res){
+
+    app.get('', function(req, res){
         res.status(200).send("Myles chatbot");
-    })
+    });
 
 
-    app.post('/chatbotmyles', function (req, res){
+    app.post('/chatbotmyles', function(req, res){
 
         
+        console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
+
+
+        console.log("Response: ",res)
         if (req.body.queryResult.intent.displayName.trim() == "home") {
 
-        console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
 
         var obj = {
             "fulfillmentText": "I am going to Delhi."
