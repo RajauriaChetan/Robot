@@ -20,23 +20,36 @@ app.use(bodyParser.json());
 
 
         console.log("Response: ",res)
-        if (req.body.queryResult.intent.displayName.trim() == "home") {
+        if (req.body.queryResult.intent.displayName.trim() == "talks") {
 
 
-        var obj = {
-            "fulfillmentText": "I am going to Delhi."
+    var parametersArr = req.body.queryResult.parameters.talks;
+    var parametersLength = parametersArr.length;
+    var obj;
+    console.log("Params Arr: ",parametersArr);
+    console.log("Parameters Length: ",parametersLength);
+
+    if (parametersArr[0].trim() == "name")
+    {
+        obj = {
+            "fulfillmentText": "My name is Alexa"
         }
-        res.status(201).json(obj);
-
-        }else{
-        var obj = {
-            "fulfillmentText": "Can you rephrase what you just said?!"
+    }
+    else if (parametersArr[0].trim() == "do")
+    {
+        obj = {
+            "fulfillmentText": "I work in Carzonrent"
         }
+    }
+    else
+    {
+        obj = {
+            "fulfillmentText": "Sorry! I missed it. Can you pleae repeat it again?"
+        }
+    }
         res.status(201).json(obj);
-        
         }
     });
-
 
 
     app.listen(port);
