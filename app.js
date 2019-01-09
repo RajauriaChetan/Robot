@@ -17,9 +17,6 @@ app.use(bodyParser.json());
 
         
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
-
-
-        console.log("Response: ",res)
         if (req.body.queryResult.intent.displayName.trim() == "talks") {
 
 
