@@ -21,3 +21,5 @@ app.get('/chatbotmyles', function (req, res) {
     app.get("", function(req, res){
         res.status(200).send("Myles chatbot");
     })
+
+    "fulfillmentText"="My name is chetan"
