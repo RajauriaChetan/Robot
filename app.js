@@ -23,6 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
     router.post('', function (req, res){
         var objhhhhhh;
 
+        console("The Intent name is : ",req.body.queryResult.intent.displayName)
+
         if (req.body.queryResult.intent.displayName.trim() == "home") {
 
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
