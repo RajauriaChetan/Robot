@@ -24,13 +24,13 @@ app.get('/chatbotmyles', function (req, res) {
 
     router.post('', function (req, res) 
     {
-        if (req.body.queryResult.intent.displayName.trim() == "demo") {
+        if (req.body.queryResult.intent.displayName.trim() == "home") {
 
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
 
         var obj;
         obj = {
-            "fulfillmentText": "I live in Surat"
+            "fulfillmentText": "I am going to Delhi."
         }
         res.status(201).json(obj);
         module.exports = router;
