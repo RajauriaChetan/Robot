@@ -10,8 +10,6 @@ const dialogflow = require('dialogflow');
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.listen(port, () => console.log('Example app listening on port ${port}!'))
-
 app.get('/chatbotmyles', function (req, res) {
     console.log(res)
     
@@ -37,6 +35,8 @@ app.get('/chatbotmyles', function (req, res) {
     });
 
 
+
+    app.listen(port, () => console.log('Example app listening on port ${port}!'))
 
 
 
