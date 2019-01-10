@@ -45,13 +45,14 @@ app.use(bodyParser.json());
         }
     }
 
-    else if (parametersArr[0].trim() == "Who")
+    else if (parametersArr[0].trim() == "who")
     {
         obj = {
             "fulfillmentText": "I am your friend :)"
         }
     }
 
+    
     else
     {
         obj = {
@@ -65,7 +66,7 @@ app.use(bodyParser.json());
 
     app.listen(port);
 
-    console.log("This App is in development!")
+    console.log("This App is under development!")
 
 
 
