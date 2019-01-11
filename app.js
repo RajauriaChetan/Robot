@@ -12,11 +12,14 @@ app.use(bodyParser.json());
 
     app.post('/chatbotmyles', function(req, res){
 
-    console.log("Function Called")
-
     console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
     console.log("Url is : ",req.baseUrl)
-    res.status(200).send("Response is :",req.body.queryResult.webhookStatus.message);
+
+
+    var parametersArr = req.body.queryResult.parameters.welcome;
+    //var parametersLength = parametersArr.length;
+    var obj;
+    console.log("Params Arrrrrrrrrrrrrr: ",parametersArr);
 
 
         if (req.body.queryResult.intent.displayName.trim() == "Alarmsss") {
