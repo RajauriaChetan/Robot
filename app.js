@@ -10,7 +10,7 @@ app.use(bodyParser.json());
         res.status(200).send("Chetan - Function Called...");
     });
 
-    app.post('/chatbotmyles', function(req, res){
+    app.post('chatbotmyles', function(req, res){
 
         console.log("Function Called")
 
