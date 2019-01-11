@@ -12,13 +12,12 @@ app.use(bodyParser.json());
 
     app.post('', function(req, res){
 
-        console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
-
+    console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
     console.log("Url is : ",req.baseUrl)
 
         if (req.body.queryResult.intent.displayName.trim() == "Alarms") {
 
-    var parametersArr = req.body.queryResult.parameters.talks;
+    var parametersArr = req.body.queryResult.parameters.welcome;
     //var parametersLength = parametersArr.length;
     var obj;
     console.log("Params Arr: ",parametersArr);
