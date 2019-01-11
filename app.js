@@ -10,7 +10,7 @@ app.use(bodyParser.json());
         res.status(200).send("Myles chatbot");
     });
 
-    app.post('/chatbotmyles', function(req, res){
+    app.post('', function(req, res){
 
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
 
