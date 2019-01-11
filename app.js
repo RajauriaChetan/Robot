@@ -6,19 +6,14 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
-
     app.get('', function(req, res){
         res.status(200).send("Myles chatbot");
     });
 
-
     app.post('/chatbotmyles', function(req, res){
 
-        
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
-        if (req.body.queryResult.intent.displayName.trim() == "talks") {
-
+        if (req.body.queryResult.intent.displayName.trim() == "Alarm.welcome") {
 
     var parametersArr = req.body.queryResult.parameters.talks;
     var parametersLength = parametersArr.length;
@@ -26,14 +21,15 @@ app.use(bodyParser.json());
     console.log("Params Arr: ",parametersArr);
     console.log("Parameters Length: ",parametersLength);
 
-    if (parametersArr[0].trim() == "name")
+    if (parametersArr[0].trim() == "hi")
     {
         obj = {
-            "fulfillmentText": "My name is Alexa"
+            "fulfillmentText": "Oh Hi! My name is Alexa. How can I help you?"
         }
     }
     else if (parametersArr[0].trim() == "do")
     {
+
         obj = {
             "fulfillmentText": "I work in Carzonrent"
         }
@@ -48,11 +44,10 @@ app.use(bodyParser.json());
     else if (parametersArr[0].trim() == "who")
     {
         obj = {
-            "fulfillmentText": "I am your friend :)"
+            "fulfillmentText": "I am your friend Chetan :)"
         }
     }
 
-    
     else
     {
         obj = {
@@ -63,11 +58,7 @@ app.use(bodyParser.json());
         }
     });
 
-
     app.listen(port);
 
     console.log("This App is under development!")
-
-
-
 
