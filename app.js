@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
     app.get('', function(req, res){
-        res.status(200).send("Myles chatbot");
+        res.status(200).send("Chetan - Function Called...");
     });
 
     app.post('', function(req, res){
