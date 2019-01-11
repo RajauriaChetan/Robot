@@ -10,7 +10,7 @@ app.use(bodyParser.json());
         res.status(200).send("Myles chatbot");
     });
 
-    app.post('', function(req, res){
+    app.post('/chatbotmyles', function(req, res){
 
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
 
@@ -30,33 +30,7 @@ app.use(bodyParser.json());
             "fulfillmentText": "Oh Hi! My name is Alexa. How can I help you?"
         }
     }
-    else if (parametersArr[0].trim() == "do")
-    {
-
-        obj = {
-            "fulfillmentText": "I work in Carzonrent"
-        }
-    }
-    else if (parametersArr[0].trim() == "how")
-    {
-        obj = {
-            "fulfillmentText": "I am fine dear. How about you?"
-        }
-    }
-
-    else if (parametersArr[0].trim() == "who")
-    {
-        obj = {
-            "fulfillmentText": "I am your friend Chetan :)"
-        }
-    }
-
-    else
-    {
-        obj = {
-            "fulfillmentText": "Sorry! I missed it. Can you pleae repeat it again?"
-        }
-    }
+    
         res.status(201).json(obj);
         }
     });
