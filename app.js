@@ -13,7 +13,7 @@ app.use(bodyParser.json());
     app.post('/chatbotmyles', function(req, res){
 
         console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
-        if (req.body.queryResult.intent.displayName.trim() == "Alarm.welcome") {
+        if (req.body.queryResult.intent.displayName.trim() == "Alarms") {
 
     var parametersArr = req.body.queryResult.parameters.talks;
     var parametersLength = parametersArr.length;
