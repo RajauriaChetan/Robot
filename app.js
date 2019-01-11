@@ -10,9 +10,9 @@ app.use(bodyParser.json());
         res.status(200).send("Chetan - Function Called...");
     });
 
-    app.post('chatbotmyles', function(req, res){
+    app.post('/chatbotmyles', function(req, res){
 
-        console.log("Function Called")
+    console.log("Function Called")
 
     console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
     console.log("Url is : ",req.baseUrl)
