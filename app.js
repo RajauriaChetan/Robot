@@ -19,7 +19,7 @@ app.use(bodyParser.json());
     res.status(200).send("Response is :",req.body.queryResult.webhookStatus.message);
 
 
-        if (req.body.queryResult.intent.displayName.trim() == "Alarms") {
+        if (req.body.queryResult.intent.displayName.trim() == "Alarmsss") {
 
     var parametersArr = req.body.queryResult.parameters.welcome;
     //var parametersLength = parametersArr.length;
