@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 
     console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
     console.log("Url is : ",req.baseUrl)
+    res.status(200).send("Response is :",req.body.queryResult.webhookStatus.message);
+
 
         if (req.body.queryResult.intent.displayName.trim() == "Alarms") {
 
@@ -33,6 +35,7 @@ app.use(bodyParser.json());
     }
     
         res.status(201).json(obj);
+
         }
     });
 
