@@ -12,6 +12,8 @@ app.use(bodyParser.json());
 
     app.post('', function(req, res){
 
+        console.log("Function Called")
+
     console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
     console.log("Url is : ",req.baseUrl)
 
