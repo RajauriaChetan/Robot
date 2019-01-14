@@ -52,6 +52,27 @@ app.use(bodyParser.json());
         }
     }
 
+    else if (parametersArr[0].trim() == "discount")
+    {
+        obj = {
+            "fulfillmentText": "We provide discount for that you need to use the Coupon Codes."
+        }
+    }
+
+    else if (parametersArr[0].trim() == "calculate")
+    {
+        obj = {
+            "fulfillmentText": "We have different pricing plans basis how many kilometers you plan to drive."
+        }
+    }
+
+    else if (parametersArr[0].trim() == "extra")
+    {
+        obj = {
+            "fulfillmentText": "If you drive more kilometers than what was billed to you, you will be charged extra basis the additional km charge for the specified car model and city."
+        }
+    }
+
     else
     {
         obj = {
