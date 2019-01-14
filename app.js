@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 
         if (req.body.queryResult.intent.displayName.trim() == "Policy") {
 
-    var parametersArr = req.body.queryResult.parameters.welcome;
+    var parametersArr = req.body.queryResult.parameters.userpolicy;
     var parametersLength = parametersArr.length;
     var obj;
     console.log("Params Arr: ",parametersArr);
