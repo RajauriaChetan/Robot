@@ -41,9 +41,17 @@ app.use(bodyParser.json());
     else if (parametersArr[0].trim() == "minimum")
     {
         obj = {
-            "fulfillmentText": "Ahhh, The minimum offer is we currently offer 3 packages for 120 km, 240 km and Unlimited"
+            "fulfillmentText": "Ahhh, The minimum package is we currently offer 3 packages for 120 km, 240 km and Unlimited"
         }
     }
+
+    else if (parametersArr[0].trim() == "price")
+    {
+        obj = {
+            "fulfillmentText": "The price is approx 3499 INR Rs"
+        }
+    }
+
     else
     {
         obj = {
