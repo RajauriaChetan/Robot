@@ -21,7 +21,7 @@ app.use(bodyParser.json());
     console.log("Params Arrrrrrrrrrrrrr: ",parametersArr);
 
 
-        if (req.body.queryResult.intent.displayName.trim() == "Alarmsss") {
+        if (req.body.queryResult.intent.displayName.trim() == "Policy") {
 
     var parametersArr = req.body.queryResult.parameters.welcome;
     var parametersLength = parametersArr.length;
@@ -29,15 +29,13 @@ app.use(bodyParser.json());
     console.log("Params Arr: ",parametersArr);
     console.log("Parameters Length: ",parametersLength);
 
-    if (parametersArr[0].trim() == "hi")
+    if (parametersArr[0].trim() == "kms")
     {
         obj = {
             "fulfillmentText": "Oh Hi! My name is Alexa. How can I help you?"
         }
     }
-    
         res.status(201).json(obj);
-
         }
     });
 
