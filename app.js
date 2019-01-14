@@ -15,8 +15,7 @@ app.use(bodyParser.json());
     console.log("The endpoint is: " + JSON.stringify(req.body, null, 0));
 
 
-    var parametersArr = req.body.queryResult.parameters.welcome;
-    var parametersLength = parametersArr.length;
+    var parametersArr = req.body.queryResult.parameters.userpolicy;
     var obj;
     console.log("Params Arrrrrrrrrrrrrr: ",parametersArr);
 
@@ -27,7 +26,6 @@ app.use(bodyParser.json());
     var parametersLength = parametersArr.length;
     var obj;
     console.log("Params Arr: ",parametersArr);
-    console.log("Parameters Length: ",parametersLength);
 
     if (parametersArr[0].trim() == "kms")
     {
