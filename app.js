@@ -73,6 +73,29 @@ app.use(bodyParser.json());
         }
     }
 
+    else if (parametersArr[0].trim() == "mode" || parametersArr[0].trim() == "mode" || parametersArr[0].trim() == "cards")
+    {
+        obj = {
+            "fulfillmentText": "If you drive more kilometers than what was billed to you, you will be charged extra basis the additional km charge for the specified car model and city."
+        }
+    }
+
+    else if (parametersArr[0].trim() == "mode" || parametersArr[0].trim() == "mode" || parametersArr[0].trim() == "cards")
+    {
+        obj = {
+            "fulfillmentText": "If you drive more kilometers than what was billed to you, you will be charged extra basis the additional km charge for the specified car model and city."
+        }
+    }
+
+    else if (parametersArr[0].trim() == "limited")
+    {
+        obj = {
+            "fulfillmentText": "In unlimited Km package you may drive any number of kilometers"
+        }
+    }
+
+    //
+
     else
     {
         obj = {
